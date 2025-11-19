@@ -21,8 +21,10 @@ A modern, interactive memecoin website featuring Popdog - the chaotic dog that p
 
 ### Payment Gateway
 - **x402 Payment Integration**: Built-in payment card for content access
+- **x402 SDK Support**: Full integration with Rapid402 SDK for Solana
 - **Solana Wallet Support**: Seamless connection with Phantom and Solflare
 - **Network Detection**: Automatic Solana network detection
+- **Micropayments**: On-chain micropayments over HTTP protocol
 
 ### Modern UI/UX
 - **Responsive Design**: Optimized for desktop, tablet, and mobile
@@ -42,18 +44,23 @@ A modern, interactive memecoin website featuring Popdog - the chaotic dog that p
 
 ```
 popdog/
-├── index.html          # Main HTML file
-├── styles.css          # All styles and responsive design
-├── logo.jpg            # Popdog logo
-├── banner.jpg          # Banner image
-├── mouthopen.jpg       # Popdog with open mouth
-├── mouthclose.png      # Popdog with closed mouth
-├── meme.jpg            # Meme image
-├── pic.jpg             # Additional image
+├── index.html              # Main HTML file
+├── styles.css              # All styles and responsive design
+├── logo.jpg                # Popdog logo
+├── banner.jpg              # Banner image
+├── mouthopen.jpg           # Popdog with open mouth
+├── mouthclose.png          # Popdog with closed mouth
+├── meme.jpg                # Meme image
+├── pic.jpg                 # Additional image
 ├── cat-mouth-noise-192-kbps.mp3  # Sound effect
-├── README.md           # This file
-├── LICENSE             # MIT License
-└── .gitignore          # Git ignore file
+├── README.md               # This file
+├── LICENSE                 # MIT License
+├── TECHNICAL.md            # Technical documentation
+├── X402_INTEGRATION.md     # x402 payment system integration guide
+├── X402_SDK_GUIDE.md       # x402 SDK quick start guide
+├── CONTRIBUTING.md         # Contribution guidelines
+├── DEPLOYMENT.md           # Deployment guide
+└── .gitignore              # Git ignore file
 ```
 
 ## 🎯 Key Sections
