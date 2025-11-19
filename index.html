@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popdog ~ The Dog That Pops</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.jpg" alt="Popdog Logo" class="logo-img">
+                <span class="logo-text">POPDOG</span>
+            </div>
+            <nav class="nav">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#send-popdog" class="nav-link">Send PopDog</a>
+                <a href="#memes" class="nav-link">Meme Wall</a>
+                <a href="#community" class="nav-link">Community</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-image">
+                <div class="popdog-container">
+                    <img src="mouthopen.jpg" alt="Popdog Banner" class="banner-img" id="popdogImage">
+                    <div class="pop-counter">
+                        <span id="popCount">0</span>
+                        <span class="pop-label">Pops</span>
+                    </div>
+                    <p class="click-hint">Click Popdog to make him pop!</p>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1 class="hero-title">Popdog ~ The Dog That Pops.</h1>
+                <p class="hero-subtitle">A loudmouthed memecoin born to pop off the chart and your screen.</p>
+                <div class="hero-buttons">
+                    <a href="https://pump.fun/coin/BpHUVW5Hbm2M9g1U6H8QRoCs1PGoDrSqWW3Cs4w2pump" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Buy POPDOG Now</a>
+                    <a href="#community" class="btn btn-secondary">Join the Pack</a>
+                </div>
+                <div class="x402-payment-card">
+                    <div class="payment-header">
+                        <div class="wallet-icon">💳</div>
+                        <h3 class="payment-title">x402 Popdog Payment</h3>
+                        <p class="payment-subtitle">To access this content, please pay 1 POPDOG.</p>
+                    </div>
+                    <div class="payment-details">
+                        <div class="payment-row">
+                            <span class="payment-label">Connected wallet</span>
+                            <span class="payment-value" id="walletAddress">Not connected</span>
+                        </div>
+                        <div class="wallet-connect-section" id="walletConnectSection" style="display: none;">
+                            <button class="connect-wallet-btn" id="connectWalletBtn">Connect Wallet</button>
+                        </div>
+                        <div class="payment-row">
+                            <span class="payment-label">Network</span>
+                            <span class="payment-network">
+                                <span class="network-icon">🟣</span>
+                                Solana
+                            </span>
+                        </div>
+                        <div class="payment-row">
+                            <span class="payment-label">Total</span>
+                            <span class="payment-total">1000 POPDOG</span>
+                        </div>
+                    </div>
+                    <button class="pay-now-btn" id="payNowBtn">Pay now</button>
+                    <div class="live-message" id="liveMessage" style="display: none;">
+                        <span class="live-text">Live in 24 hours</span>
+                    </div>
+                </div>
+                <div class="contract-address">
+                    <span class="contract-label">Contract Address:</span>
+                    <div class="contract-box">
+                        <code class="contract-code" id="contractAddress">BpHUVW5Hbm2M9g1U6H8QRoCs1PGoDrSqWW3Cs4w2pump</code>
+                        <span class="copy-hint">Select & copy</span>
+                    </div>
+                </div>
+                <div class="hero-info">
+                    <div class="info-card">
+                        <span class="info-label">Ticker:</span>
+                        <span class="info-value">POPDOG</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label">Chain:</span>
+                        <span class="info-value">Solana</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-label">Supply:</span>
+                        <span class="info-value">1,000,000,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">What Is Popdog?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Popdog is that chaotic dog that just POPS into everything—fires, casinos, random chaos—and barks the LOUDEST when markets go absolutely bonkers. This round brown-and-white pup with a massive open mouth isn't here to make promises. It's here to make NOISE.</p>
+                    <p>Born from pure meme chaos, Popdog is the unpredictable energy of crypto markets personified. When things get wild? Popdog pops. Charts going vertical? Popdog barks. Simple as that.</p>
+                    <p>Zero utility promises. Zero roadmap guarantees. Just a dog that knows exactly when to pop into the scene and make everyone pay attention. That's the Popdog way.</p>
+                </div>
+                <div class="about-card">
+                    <ul class="about-list">
+                        <li>Meme-first, community-driven</li>
+                        <li>No promises, just pure dog chaos</li>
+                        <li>Built for fun, vibes and memes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Send PopDog Section -->
+    <section id="send-popdog" class="section send-popdog">
+        <div class="container">
+            <h2 class="section-title">Popdog Payment Solution</h2>
+            <div class="send-popdog-wrapper">
+                <div class="send-popdog-card">
+                    <!-- Header Text -->
+                    <div class="send-popdog-header">
+                        <h3 class="send-popdog-title">Send PopDog</h3>
+                        <div class="send-popdog-subtitle-1">No fees. No friction.</div>
+                        <div class="send-popdog-subtitle-2">Move PopDog across wallets instantly. No gas, no delays, no limits.</div>
+                    </div>
+
+                    <!-- Sending Panel -->
+                    <div class="send-popdog-panel">
+                        <div class="send-popdog-label">Sending</div>
+                        <div class="send-popdog-content">
+                            <button class="send-popdog-token-selector" id="sendPopdogTokenSelector">PopDog ▼</button>
+                            <div class="send-popdog-amount-display">
+                                <input 
+                                    type="text" 
+                                    class="send-popdog-amount-input" 
+                                    id="sendPopdogAmountInput" 
+                                    placeholder="0.00"
+                                    inputmode="decimal"
+                                >
+                                <div class="send-popdog-usd-value" id="sendPopdogUsdValue">$0.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recipient Input -->
+                    <div class="send-popdog-recipient-panel">
+                        <div class="send-popdog-label">To:</div>
+                        <input 
+                            type="text" 
+                            class="send-popdog-recipient-input" 
+                            id="sendPopdogRecipientInput" 
+                            placeholder="Enter recipient address"
+                        >
+                    </div>
+
+                    <!-- Wallet Status -->
+                    <div class="send-popdog-wallet-status" id="sendPopdogWalletStatus" style="display: none;">
+                        <div class="send-popdog-label">Connected Wallet</div>
+                        <div class="send-popdog-wallet-address" id="sendPopdogWalletAddress">Not connected</div>
+                    </div>
+
+                    <!-- Connect Wallet Button -->
+                    <button class="send-popdog-connect-btn" id="sendPopdogConnectBtn">Connect Wallet</button>
+                    <div class="send-popdog-toast" id="sendPopdogToast"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meme Wall Section -->
+    <section id="memes" class="section memes">
+        <div class="container">
+            <h2 class="section-title">Popdog In The Wild</h2>
+            <p class="memes-intro">Popdog pops into random scenes, bringing chaos and vibes wherever it goes. Here's the pack in action.</p>
+            <div class="memes-grid">
+                <div class="meme-item">
+                    <img src="pic.jpg" alt="Popdog at the baccarat table" class="meme-img">
+                    <p class="meme-caption">Popdog at the baccarat table</p>
+                </div>
+                <div class="meme-item">
+                    <img src="meme.jpg" alt="Popdog watching the world burn" class="meme-img">
+                    <p class="meme-caption">Popdog watching the world burn</p>
+                </div>
+                <div class="meme-item">
+                    <img src="banner.jpg" alt="Popdog swarm background" class="meme-img">
+                    <p class="meme-caption">Popdog swarm background</p>
+                </div>
+                <div class="meme-item">
+                    <img src="logo.jpg" alt="Classic Popdog logo" class="meme-img">
+                    <p class="meme-caption">Classic Popdog logo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="section community">
+        <div class="container">
+            <h2 class="section-title">Join The Popdog Pack</h2>
+            <div class="community-content">
+                <div class="community-text">
+                    <p>Ready to bark with the pack? Join Popdog's wild community and dive into the chaos. Follow the dog, share the memes, and watch it pop off.</p>
+                    <p>This is 100% community-driven, built on pure vibes, memes, and dog energy. Zero promises. Maximum fun. That's it.</p>
+                </div>
+                <div class="community-links">
+                    <a href="https://x.com/popdog_0?s=21" target="_blank" rel="noopener noreferrer" class="btn btn-community">Popdog on X</a>
+                    <a href="https://x.com/i/communities/1989024087017234529" target="_blank" rel="noopener noreferrer" class="btn btn-community">Popdog Community</a>
+                </div>
+            </div>
+            <p class="disclaimer">This site is a meme project and makes no guarantees or promises. Not financial advice. Purely for fun.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Popdog ~ The dog that pops.</p>
+            <p class="footer-disclaimer">This site is a meme project and makes no guarantees or promises.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let popCount = 0;
+            let isMouthOpen = true; // Start with mouth open
+            const popdogImage = document.getElementById('popdogImage');
+            const popCountDisplay = document.getElementById('popCount');
+            const payNowBtn = document.getElementById('payNowBtn');
+            const liveMessage = document.getElementById('liveMessage');
+            const walletAddress = document.getElementById('walletAddress');
+            const connectWalletBtn = document.getElementById('connectWalletBtn');
+            const walletConnectSection = document.getElementById('walletConnectSection');
+            
+            // Solana wallet detection and connection
+            function checkSolanaWallet() {
+                if (typeof window.solana !== 'undefined' && window.solana.isPhantom) {
+                    // Phantom wallet detected
+                    if (window.solana.isConnected) {
+                        const address = window.solana.publicKey.toString();
+                        walletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        walletConnectSection.style.display = 'none';
+                    } else {
+                        walletAddress.textContent = 'Not connected';
+                        walletConnectSection.style.display = 'block';
+                    }
+                } else if (typeof window.solflare !== 'undefined') {
+                    // Solflare wallet detected
+                    if (window.solflare.isConnected) {
+                        const address = window.solflare.publicKey.toString();
+                        walletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        walletConnectSection.style.display = 'none';
+                    } else {
+                        walletAddress.textContent = 'Not connected';
+                        walletConnectSection.style.display = 'block';
+                    }
+                } else {
+                    walletAddress.textContent = 'No wallet found';
+                    walletConnectSection.style.display = 'block';
+                }
+            }
+            
+            // Connect wallet function
+            async function connectWallet() {
+                try {
+                    if (typeof window.solana !== 'undefined' && window.solana.isPhantom) {
+                        const response = await window.solana.connect();
+                        const address = response.publicKey.toString();
+                        walletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        walletConnectSection.style.display = 'none';
+                    } else if (typeof window.solflare !== 'undefined') {
+                        await window.solflare.connect();
+                        const address = window.solflare.publicKey.toString();
+                        walletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        walletConnectSection.style.display = 'none';
+                    } else {
+                        alert('Please install Phantom or Solflare wallet extension');
+                    }
+                } catch (err) {
+                    console.error('Wallet connection error:', err);
+                    walletAddress.textContent = 'Connection failed';
+                }
+            }
+            
+            // Check wallet on load
+            checkSolanaWallet();
+            
+            // Listen for wallet changes
+            if (typeof window.solana !== 'undefined') {
+                window.solana.on('connect', () => {
+                    const address = window.solana.publicKey.toString();
+                    walletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                    walletConnectSection.style.display = 'none';
+                });
+                
+                window.solana.on('disconnect', () => {
+                    walletAddress.textContent = 'Not connected';
+                    walletConnectSection.style.display = 'block';
+                });
+            }
+            
+            // Connect wallet button handler
+            if (connectWalletBtn) {
+                connectWalletBtn.addEventListener('click', connectWallet);
+            }
+            
+            // Pay now button handler
+            if (payNowBtn && liveMessage) {
+                payNowBtn.addEventListener('click', function() {
+                    liveMessage.style.display = 'block';
+                    payNowBtn.style.display = 'none';
+                    
+                    // Reset after 5 seconds (optional)
+                    setTimeout(() => {
+                        liveMessage.style.display = 'none';
+                        payNowBtn.style.display = 'block';
+                    }, 5000);
+                });
+            }
+            
+            // Pop sound using MP3 file
+            const popSound = new Audio('cat-mouth-noise-192-kbps.mp3');
+            popSound.volume = 0.5; // Set volume to 50%
+            
+            function playPopSound() {
+                try {
+                    // Reset audio to start for rapid clicks
+                    popSound.currentTime = 0;
+                    popSound.play().catch(error => {
+                        // Handle autoplay restrictions
+                        console.log('Sound playback error:', error);
+                    });
+                } catch (error) {
+                    console.log('Sound playback error:', error);
+                }
+            }
+            
+            if (popdogImage && popCountDisplay) {
+                popdogImage.addEventListener('click', function() {
+                    // Play pop sound
+                    playPopSound();
+                    
+                    // Toggle mouth state
+                    if (isMouthOpen) {
+                        // Close mouth - switch to mouthclose.png (mouth closed)
+                        popdogImage.src = 'mouthclose.png';
+                        popdogImage.classList.add('mouth-close-animation');
+                        isMouthOpen = false;
+                    } else {
+                        // Open mouth - switch back to mouthopen.jpg (mouth open)
+                        popdogImage.src = 'mouthopen.jpg';
+                        popdogImage.classList.add('mouth-open-animation');
+                        isMouthOpen = true;
+                    }
+                    
+                    // Add bounce animation
+                    popdogImage.classList.add('popdog-bounce');
+                    
+                    // Increment counter
+                    popCount++;
+                    popCountDisplay.textContent = popCount;
+                    
+                    // Remove animation classes after animation completes
+                    setTimeout(() => {
+                        popdogImage.classList.remove('popdog-bounce');
+                        popdogImage.classList.remove('mouth-close-animation');
+                        popdogImage.classList.remove('mouth-open-animation');
+                    }, 600);
+                    
+                    // Add celebration for milestones
+                    if (popCount === 10 || popCount === 50 || popCount === 100) {
+                        popCountDisplay.parentElement.classList.add('celebrate');
+                        setTimeout(() => {
+                            popCountDisplay.parentElement.classList.remove('celebrate');
+                        }, 1000);
+                    }
+                });
+            }
+
+            // Send PopDog functionality
+            const POPDOG_PRICE = 0.01; // 1 PopDog = $0.01
+            const sendPopdogAmountInput = document.getElementById('sendPopdogAmountInput');
+            const sendPopdogUsdValue = document.getElementById('sendPopdogUsdValue');
+            const sendPopdogConnectBtn = document.getElementById('sendPopdogConnectBtn');
+            const sendPopdogToast = document.getElementById('sendPopdogToast');
+            const sendPopdogWalletStatus = document.getElementById('sendPopdogWalletStatus');
+            const sendPopdogWalletAddress = document.getElementById('sendPopdogWalletAddress');
+
+            // Function to update USD value for Send PopDog
+            function updateSendPopdogUSDValue() {
+                if (!sendPopdogAmountInput || !sendPopdogUsdValue) return;
+                
+                const amount = parseFloat(sendPopdogAmountInput.value);
+                
+                if (isNaN(amount) || sendPopdogAmountInput.value === '' || sendPopdogAmountInput.value === null) {
+                    sendPopdogUsdValue.textContent = '$0.00';
+                } else {
+                    const usdAmount = amount * POPDOG_PRICE;
+                    sendPopdogUsdValue.textContent = `$${usdAmount.toFixed(2)}`;
+                }
+            }
+
+            // Listen for input changes in Send PopDog amount
+            if (sendPopdogAmountInput) {
+                sendPopdogAmountInput.addEventListener('input', updateSendPopdogUSDValue);
+                sendPopdogAmountInput.addEventListener('blur', function() {
+                    const value = parseFloat(this.value);
+                    if (!isNaN(value) && this.value !== '') {
+                        this.value = value.toFixed(2);
+                        updateSendPopdogUSDValue();
+                    }
+                });
+            }
+
+            // Send PopDog wallet detection and connection
+            function checkSendPopdogWallet() {
+                if (!sendPopdogWalletAddress || !sendPopdogWalletStatus || !sendPopdogConnectBtn) return;
+
+                if (typeof window.solana !== 'undefined' && window.solana.isPhantom) {
+                    // Phantom wallet detected
+                    if (window.solana.isConnected) {
+                        const address = window.solana.publicKey.toString();
+                        sendPopdogWalletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        sendPopdogWalletStatus.style.display = 'block';
+                        sendPopdogConnectBtn.textContent = 'Disconnect Wallet';
+                        sendPopdogConnectBtn.classList.add('disconnected');
+                    } else {
+                        sendPopdogWalletAddress.textContent = 'Not connected';
+                        sendPopdogWalletStatus.style.display = 'none';
+                        sendPopdogConnectBtn.textContent = 'Connect Wallet';
+                        sendPopdogConnectBtn.classList.remove('disconnected');
+                    }
+                } else if (typeof window.solflare !== 'undefined') {
+                    // Solflare wallet detected
+                    if (window.solflare.isConnected) {
+                        const address = window.solflare.publicKey.toString();
+                        sendPopdogWalletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        sendPopdogWalletStatus.style.display = 'block';
+                        sendPopdogConnectBtn.textContent = 'Disconnect Wallet';
+                        sendPopdogConnectBtn.classList.add('disconnected');
+                    } else {
+                        sendPopdogWalletAddress.textContent = 'Not connected';
+                        sendPopdogWalletStatus.style.display = 'none';
+                        sendPopdogConnectBtn.textContent = 'Connect Wallet';
+                        sendPopdogConnectBtn.classList.remove('disconnected');
+                    }
+                } else {
+                    sendPopdogWalletAddress.textContent = 'No wallet found';
+                    sendPopdogWalletStatus.style.display = 'none';
+                    sendPopdogConnectBtn.textContent = 'Connect Wallet';
+                    sendPopdogConnectBtn.classList.remove('disconnected');
+                }
+            }
+
+            // Connect/disconnect wallet function for Send PopDog
+            async function connectSendPopdogWallet() {
+                if (!sendPopdogWalletAddress || !sendPopdogToast || !sendPopdogWalletStatus || !sendPopdogConnectBtn) return;
+
+                try {
+                    // Check if already connected
+                    if (sendPopdogConnectBtn.classList.contains('disconnected')) {
+                        // Disconnect
+                        if (typeof window.solana !== 'undefined' && window.solana.isPhantom) {
+                            await window.solana.disconnect();
+                        } else if (typeof window.solflare !== 'undefined') {
+                            await window.solflare.disconnect();
+                        }
+                        checkSendPopdogWallet();
+                        return;
+                    }
+
+                    // Connect
+                    if (typeof window.solana !== 'undefined' && window.solana.isPhantom) {
+                        const response = await window.solana.connect();
+                        const address = response.publicKey.toString();
+                        sendPopdogWalletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        sendPopdogWalletStatus.style.display = 'block';
+                        sendPopdogConnectBtn.textContent = 'Disconnect Wallet';
+                        sendPopdogConnectBtn.classList.add('disconnected');
+                        sendPopdogToast.textContent = 'Wallet connected successfully!';
+                        sendPopdogToast.classList.add('show');
+                        setTimeout(() => {
+                            sendPopdogToast.classList.remove('show');
+                        }, 3000);
+                    } else if (typeof window.solflare !== 'undefined') {
+                        await window.solflare.connect();
+                        const address = window.solflare.publicKey.toString();
+                        sendPopdogWalletAddress.textContent = address.slice(0, 4) + '...' + address.slice(-4);
+                        sendPopdogWalletStatus.style.display = 'block';
+                        sendPopdogConnectBtn.textContent = 'Disconnect Wallet';
+                        sendPopdogConnectBtn.classList.add('disconnected');
+                        sendPopdogToast.textContent = 'Wallet connected successfully!';
+                        sendPopdogToast.classList.add('show');
+                        setTimeout(() => {
+                            sendPopdogToast.classList.remove('show');
+                        }, 3000);
+                    } else {
+                        sendPopdogToast.textContent = 'Please install Phantom or Solflare wallet extension';
+                        sendPopdogToast.classList.add('show');
+                        setTimeout(() => {
+                            sendPopdogToast.classList.remove('show');
+                        }, 3000);
+                    }
+                } catch (err) {
+                    console.error('Wallet connection error:', err);
+                    sendPopdogWalletAddress.textContent = 'Connection failed';
+                    sendPopdogToast.textContent = 'Connection failed. Please try again.';
+                    sendPopdogToast.classList.add('show');
+                    setTimeout(() => {
+                        sendPopdogToast.classList.remove('show');
+                    }, 3000);
+                }
+            }
+
+            // Check wallet on load
+            checkSendPopdogWallet();
+
+            // Listen for wallet changes
+            if (typeof window.solana !== 'undefined') {
+                window.solana.on('connect', () => {
+                    checkSendPopdogWallet();
+                });
+                
+                window.solana.on('disconnect', () => {
+                    checkSendPopdogWallet();
+                });
+            }
+
+            // Send PopDog Connect Wallet button handler
+            if (sendPopdogConnectBtn) {
+                sendPopdogConnectBtn.addEventListener('click', connectSendPopdogWallet);
+            }
+
+            // Initialize Send PopDog USD value
+            updateSendPopdogUSDValue();
+        });
+    </script>
+</body>
+</html>
+

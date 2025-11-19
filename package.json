@@ -1,0 +1,33 @@
+{
+  "name": "popdog",
+  "version": "1.0.0",
+  "description": "Popdog - The Dog That Pops. A modern memecoin website with interactive features and Solana wallet integration.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "dev": "npx http-server -p 8000 -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Popdogos/Popdog.git"
+  },
+  "keywords": [
+    "popdog",
+    "memecoin",
+    "solana",
+    "crypto",
+    "web3",
+    "wallet",
+    "interactive"
+  ],
+  "author": "Popdogos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Popdogos/Popdog/issues"
+  },
+  "homepage": "https://github.com/Popdogos/Popdog#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
