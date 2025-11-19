@@ -182,36 +182,61 @@ function handlePaymentError(error) {
 }
 ```
 
-## Integration with Existing Code
+## Integration Patterns
 
-### Update index.html
+### Service Integration
 
-Replace the existing `payNowBtn` handler:
+Integrate x402 SDK into your payment service:
 
-```javascript
-// Replace the existing payNowBtn event listener
-if (payNowBtn && liveMessage) {
-    payNowBtn.addEventListener('click', async function() {
-        await processX402Payment();
-    });
+```typescript
+import { Rapid402Client } from '@rapid402/sdk';
+import { PaymentService } from './services/payment-service';
+
+class PaymentServiceIntegration {
+    private x402Client: Rapid402Client;
+    
+    constructor() {
+        this.x402Client = new Rapid402Client({
+            network: 'mainnet-beta',
+            rpcUrl: process.env.SOLANA_RPC_URL
+        });
+    }
+    
+    async processPayment(paymentRequest: PaymentRequest): Promise<PaymentResult> {
+        return await this.x402Client.createPaymentRequest(paymentRequest);
+    }
 }
 ```
 
-### Add SDK Script Tag
+### Event-Driven Integration
 
-Add to `<head>` section:
+For event-driven architectures:
 
-```html
-<script src="https://unpkg.com/@rapid402/sdk/dist/index.umd.js"></script>
-```
+```typescript
+import { EventEmitter } from 'events';
+import { Rapid402Client } from '@rapid402/sdk';
 
-Or use ES6 modules:
-
-```html
-<script type="module">
-    import { Rapid402Client } from 'https://unpkg.com/@rapid402/sdk/dist/index.esm.js';
-    // Your code here
-</script>
+class PaymentEventEmitter extends EventEmitter {
+    private x402Client: Rapid402Client;
+    
+    constructor() {
+        super();
+        this.x402Client = new Rapid402Client({
+            network: 'mainnet-beta'
+        });
+    }
+    
+    async initiatePayment(payment: Payment): Promise<void> {
+        this.emit('payment.initiated', payment);
+        
+        try {
+            const result = await this.x402Client.processPayment(payment);
+            this.emit('payment.completed', result);
+        } catch (error) {
+            this.emit('payment.failed', error);
+        }
+    }
+}
 ```
 
 ## Advanced Features

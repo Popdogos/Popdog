@@ -1,24 +1,35 @@
 {
-  "name": "popdog",
+  "name": "@popdog/x402-protocol",
   "version": "1.0.0",
-  "description": "Popdog - The Dog That Pops. A modern memecoin website with interactive features and Solana wallet integration.",
-  "main": "index.html",
+  "description": "Enterprise-grade x402 micropayment protocol implementation for Solana blockchain. Production-ready SDK and infrastructure for on-chain micropayments over HTTP.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "start": "npx http-server -p 8000 -o",
-    "dev": "npx http-server -p 8000 -o"
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "docs:generate": "typedoc --out docs src",
+    "prepublishOnly": "npm run build && npm test"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Popdogos/Popdog.git"
   },
   "keywords": [
-    "popdog",
-    "memecoin",
+    "x402",
+    "micropayments",
     "solana",
-    "crypto",
+    "blockchain",
+    "payment-protocol",
+    "rfc-402",
+    "spl-token",
     "web3",
-    "wallet",
-    "interactive"
+    "cryptocurrency",
+    "enterprise",
+    "microservices",
+    "distributed-systems"
   ],
   "author": "Popdogos",
   "license": "MIT",
@@ -27,7 +38,29 @@
   },
   "homepage": "https://github.com/Popdogos/Popdog#readme",
   "engines": {
-    "node": ">=14.0.0"
-  }
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.0",
+    "@solana/spl-token": "^0.3.9",
+    "tweetnacl": "^1.0.3",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.1.0",
+    "typedoc": "^0.25.0",
+    "typescript": "^5.3.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }
-
