@@ -172,17 +172,60 @@ None required - uses standard web APIs only.
 - Screen reader friendly
 - ARIA labels where needed
 
+## x402 Payment System
+
+The project includes comprehensive x402 payment system integration for accepting PopDog token payments.
+
+### Documentation Files
+
+- **X402_INTEGRATION.md**: Complete integration guide covering:
+  - x402 protocol overview
+  - SDK options (Rapid402, xPlug, Coinbase reference)
+  - Implementation steps
+  - API reference
+  - Security considerations
+  - Best practices
+
+- **X402_SDK_GUIDE.md**: Quick start guide with:
+  - Installation instructions
+  - Basic setup and configuration
+  - Code examples
+  - Error handling
+  - Testing guide
+  - Production checklist
+
+### Current Implementation
+
+The x402 payment card is implemented in the hero section with:
+- Wallet connection detection
+- Payment amount display
+- Network information
+- Payment button handler
+
+### SDK Integration
+
+Recommended SDK: **Rapid402 SDK** for Solana
+- GitHub: https://github.com/rapid402/rapid402-sdk
+- TypeScript/JavaScript support
+- Solana blockchain optimized
+- Easy integration
+
+See the x402 documentation files for complete implementation details.
+
 ## Future Enhancements
 
 Potential improvements:
-1. Service Worker for offline support
-2. Progressive Web App (PWA) capabilities
-3. Dark mode toggle
-4. Internationalization (i18n)
-5. Advanced wallet features (transaction signing)
-6. Real-time price updates via API
-7. Analytics integration
-8. Error logging service
+1. Full x402 SDK integration (Rapid402)
+2. Server-side payment verification
+3. Payment history tracking
+4. Service Worker for offline support
+5. Progressive Web App (PWA) capabilities
+6. Dark mode toggle
+7. Internationalization (i18n)
+8. Advanced wallet features (transaction signing)
+9. Real-time price updates via API
+10. Analytics integration
+11. Error logging service
 
 ## Deployment
 
