@@ -1,5 +1,12 @@
 # Popdog Protocol: Enterprise-Grade x402 Payment Infrastructure
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/Popdogos/Popdog)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](package.json)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)](README.md)
+
+**🔗 [View on GitHub](https://github.com/Popdogos/Popdog)** | **📚 [Documentation](#documentation-index)** | **🔒 [Security](SECURITY.md)** | **🏗️ [Architecture](ARCHITECTURE.md)**
+
 ## Executive Summary
 
 Popdog represents a sophisticated, production-ready implementation of the x402 micropayment protocol, architected specifically for the Solana blockchain ecosystem. This repository contains comprehensive technical documentation, SDK integration guides, and architectural specifications for building enterprise-grade payment infrastructure leveraging on-chain micropayments over HTTP.
@@ -53,15 +60,26 @@ Popdog implements a **distributed, event-driven microservices architecture** opt
 └─────────────────────────────────────────────────────────┘
 ```
 
+## Quick Links
+
+- **🔗 [GitHub Repository](https://github.com/Popdogos/Popdog)** - Source code and issues
+- **📖 [Technical Documentation](TECHNICAL.md)** - Comprehensive technical specs
+- **🏗️ [Architecture Guide](ARCHITECTURE.md)** - System architecture details
+- **🔒 [Security Documentation](SECURITY.md)** - Security architecture & threat model
+- **⚙️ [Integration Guide](X402_INTEGRATION.md)** - x402 integration instructions
+- **🚀 [SDK Guide](X402_SDK_GUIDE.md)** - SDK quick start reference
+- **📋 [Contributing](CONTRIBUTING.md)** - Contribution guidelines
+- **🚢 [Deployment](DEPLOYMENT.md)** - Production deployment guide
+
 ## Repository Structure
 
 ```
 popdog/
+├── README.md                       # This file - Project overview
 ├── TECHNICAL.md                    # Comprehensive technical architecture
 ├── X402_INTEGRATION.md            # Enterprise integration guide
 ├── X402_SDK_GUIDE.md              # SDK implementation reference
 ├── ARCHITECTURE.md                 # System architecture documentation
-├── API_REFERENCE.md                # Complete API specification
 ├── SECURITY.md                     # Security architecture & threat model
 ├── DEPLOYMENT.md                   # Production deployment guide
 ├── CONTRIBUTING.md                 # Contribution guidelines
